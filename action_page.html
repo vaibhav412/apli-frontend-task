@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Apli.ai</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Tabs</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+<link rel='stylesheet' href='https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css'>
+<link rel='stylesheet' href='https://rawgit.com/mikejacobson/jquery-bootstrap-scrolling-tabs/master/dist/jquery.scrolling-tabs.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color: rgb(233, 223, 223);">
+  <nav class="navbar navbar-light bg-light fixed-top" style="align-content: right;">
+    <span class="navbar-brand mb-0 h1">Apli.ai</span>
+  </nav>
+  <section style="margin-top: 70px;">
+<!-- partial:index.partial.html -->
+  <div class="sidebar">
+    <div>
+      <center>
+      <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile" style="margin: 20px 0px;">
+      <h5 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 600; margin-bottom: 20px;" >KATE SMITH</h5>
+      <canvas id="radar-chart" style="background-color: white; width: 100%;"></canvas>
+    </center>
+    </div>
+  </div>
+  <div class="content">
+    <center>
+    <h2 style="margin: 40px">Result</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Questions</th>
+          <th scope="col">Grade</th>
+          <th scope="col">Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Question 1</th>
+          <td id="q1grade"></td>
+          <td id="q1comment"></td>
+        </tr>
+        <tr>
+          <th scope="row">Question 2</th>
+          <td id="q2grade"></td>
+          <td id="q2comment"></td>
+        </tr>
+        <tr>
+          <th scope="row">Question 3</th>
+          <td id="q3grade"></td>
+          <td id="q3comment"></td>
+        </tr>
+        <tr>
+          <th scope="row">Question 4</th>
+          <td id="q4grade"></td>
+          <td id="q4comment"></td>
+        </tr>
+        <tr>
+          <th scope="row">Question 5</th>
+          <td id="q5grade"></td>
+          <td id="q5comment"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-outline-secondary" onclick='localStorage.clear()'>Clear Storage</button>
+  </center>
+  </div>
+</section>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.min.js'></script>
+<script src='https://rawgit.com/mikejacobson/jquery-bootstrap-scrolling-tabs/master/dist/jquery.scrolling-tabs.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

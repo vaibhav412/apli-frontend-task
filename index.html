@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Apli.ai</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Tabs</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+<link rel='stylesheet' href='https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css'>
+<link rel='stylesheet' href='https://rawgit.com/mikejacobson/jquery-bootstrap-scrolling-tabs/master/dist/jquery.scrolling-tabs.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color: rgb(233, 223, 223);">
+  <nav class="navbar navbar-light bg-light fixed-top" style="align-content: right;">
+    <span class="navbar-brand mb-0 h1">Apli.ai</span>
+  </nav>
+  <section style="margin-top: 70px;">
+<!-- partial:index.partial.html -->
+  <div class="sidebar">
+    <div>
+      <center>
+      <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile" style="margin: 20px 0px;">
+      <h5 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 600; margin-bottom: 20px;" >KATE SMITH</h5>
+      <canvas id="radar-chart" style="background-color: white; width: 100%;"></canvas>
+    </center>
+    </div>
+  </div>
+  <div class="content">
+    <div id="tabs" class="md-elevation-4dp bg-theme-primary">
+      <ul class="nav nav-tabs justify-content-center" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-index="0" data-toggle="tab" href="#tab-0" role="tab">Question 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-index="1" data-toggle="tab" href="#tab-1" role="tab">Question 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-index="2" data-toggle="tab" href="#tab-2" role="tab">Question 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-index="3" data-toggle="tab" href="#tab-3" role="tab">Question 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-index="4" data-toggle="tab" href="#tab-4" role="tab">Question 5</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+
+      <div class="tab-pane fade ml-3 mt-3 active show" id="tab-0" role="tabpanel">
+        <Center>
+          <div id="q1stat" style="margin-bottom: 10px; margin-top: 10px; color: green;"></div>
+        <div class="video-responsive" style="margin-bottom: 30px;">
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/8Myx-vy0csM" frameborder="0" allowfullscreen></iframe>
+      </div>
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Grading:</h4></div>
+          <div class="col-sm-9">
+            <button type="button" class="btn btn-outline-secondary" name="q1" value="1.0" onclick='gradeq1func(this.value)'>1.0</button>
+            <button type="button" class="btn btn-outline-secondary" name="q1" value="2.0" onclick='gradeq1func(this.value)'>2.0</button>
+            <button type="button" class="btn btn-outline-secondary" name="q1" value="3.0" onclick='gradeq1func(this.value)'>3.0</button>
+            <button type="button" class="btn btn-outline-secondary" name="q1" value="4.0" onclick='gradeq1func(this.value)'>4.0</button>
+            <button type="button" class="btn btn-outline-secondary" name="q1" value="5.0" onclick='gradeq1func(this.value)'>5.0</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Comment:</h4></div>
+          <div class="col-sm-9">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Add Comment</label>
+              <textarea class="form-control" rows="3"  id="q1comment"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-outline-secondary" onclick='question1()'>Save</button>
+      </Center>
+      </div>
+
+      <div class="tab-pane fade ml-3 mt-3" id="tab-1" role="tabpanel">
+        <Center>
+        <div id="q2stat" style="margin-bottom: 10px; margin-top: 10px; color: green;"></div>
+          <div class="video-responsive" style="margin-bottom: 30px;">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/oVVdezJ0e7w" frameborder="0" allowfullscreen></iframe>
+        </div>
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Grading:</h4></div>
+            <div class="col-sm-9">
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="1.0" onclick='gradeq2func(this.value)'>1.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="2.0" onclick='gradeq2func(this.value)'>2.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="3.0" onclick='gradeq2func(this.value)'>3.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="4.0" onclick='gradeq2func(this.value)'>4.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="5.0" onclick='gradeq2func(this.value)'>5.0</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Comment:</h4></div>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Add Comment</label>
+                <textarea class="form-control" rows="3"  id="q2comment"></textarea>
+              </div>
+            </div>
+          </div>
+  
+          <button type="button" class="btn btn-outline-secondary" onclick='question2()'>Save</button>
+        </Center>
+      </div>
+
+      <div class="tab-pane fade ml-3 mt-3" id="tab-2" role="tabpanel">
+
+        <Center>
+        <div id="q3stat" style="margin-bottom: 10px; margin-top: 10px; color: green;"></div>
+
+          <div class="video-responsive" style="margin-bottom: 30px;">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/ddnI8oNvztw" frameborder="0" allowfullscreen></iframe>
+        </div>
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Grading:</h4></div>
+            <div class="col-sm-9">
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="1.0" onclick='gradeq3func(this.value)'>1.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="2.0" onclick='gradeq3func(this.value)'>2.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="3.0" onclick='gradeq3func(this.value)'>3.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="4.0" onclick='gradeq3func(this.value)'>4.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="5.0" onclick='gradeq3func(this.value)'>5.0</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Comment:</h4></div>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Add Comment</label>
+                <textarea class="form-control" rows="3"  id="q3comment"></textarea>
+              </div>
+            </div>
+          </div>
+  
+          <button type="button" class="btn btn-outline-secondary" onclick='question3()'>Save</button>
+        </Center>
+      </div>
+
+      <div class="tab-pane fade ml-3 mt-3" id="tab-3" role="tabpanel">
+
+        <Center>
+        <div id="q4stat" style="margin-bottom: 10px; margin-top: 10px; color: green;"></div>
+
+          <div class="video-responsive" style="margin-bottom: 30px;">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/g54GwsO-VXA" frameborder="0" allowfullscreen></iframe>
+        </div>
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Grading:</h4></div>
+            <div class="col-sm-9">
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="1.0" onclick='gradeq4func(this.value)'>1.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="2.0" onclick='gradeq4func(this.value)'>2.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="3.0" onclick='gradeq4func(this.value)'>3.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="4.0" onclick='gradeq4func(this.value)'>4.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="5.0" onclick='gradeq4func(this.value)'>5.0</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Comment:</h4></div>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Add Comment</label>
+                <textarea class="form-control" rows="3"  id="q4comment"></textarea>
+              </div>
+            </div>
+          </div>
+  
+          <button type="button" class="btn btn-outline-secondary" onclick='question4()'>Save</button>
+        </Center>
+      </div>
+
+      <div class="tab-pane fade ml-3 mt-3" id="tab-4" role="tabpanel">
+
+        <Center>
+        <div id="q5stat" style="margin-bottom: 10px; margin-top: 10px; color: green;"></div>
+
+          <div class="video-responsive" style="margin-bottom: 30px;">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/I00LwSMABtk" frameborder="0" allowfullscreen></iframe>
+        </div>
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Grading:</h4></div>
+            <div class="col-sm-9">
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="1.0" onclick='gradeq5func(this.value)'>1.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="2.0" onclick='gradeq5func(this.value)'>2.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="3.0" onclick='gradeq5func(this.value)'>3.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="4.0" onclick='gradeq5func(this.value)'>4.0</button>
+              <button type="button" class="btn btn-outline-secondary" name="q1" value="5.0" onclick='gradeq5func(this.value)'>5.0</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"><h4 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Comment:</h4></div>
+            <div class="col-sm-9">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Add Comment</label>
+                <textarea class="form-control" rows="3"  id="q5comment"></textarea>
+              </div>
+            </div>
+          </div>
+  
+          <button type="button" class="btn btn-outline-secondary" onclick='question5()'>Save</button>
+          <a href="action_page.html"><button type="button" class="btn btn-outline-secondary">Continue</button></a>
+        </Center>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.min.js'></script>
+<script src='https://rawgit.com/mikejacobson/jquery-bootstrap-scrolling-tabs/master/dist/jquery.scrolling-tabs.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+:root {
+  /* vars given in decimal RGB format to facilitate setting an opacity property */
+  --theme-primary-color: 25, 118, 210;            /* #1976d2 */
+  --theme-light-text-color: rgb(0, 0, 0);   /* #ffffff */
+  --theme-light-color: 255, 255, 255;             /* #ffffff */
+}
+
+.sidebar {
+  padding-top: 20px;
+  width: 300px;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-left: 300px;
+  padding: 0px 40px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .content {margin-left: 0;}
+
+}
+
+.bg-theme-primary {
+  background-color: white;
+}
+.nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+.nav-tabs .nav-link {
+  color: black;
+  border-color: transparent;
+  padding: 1em 0.8575em 0.8em 0.8575em;
+  text-align: center;
+  min-width: 72px;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link:focus {
+  color: rgb(179, 33, 33);
+  border-color: rgb(0, 0, 0);
+  border-bottom-width: 2px;
+  background-color: transparent;
+}
+.nav-tabs .nav-link:hover {
+  color: rgb(255, 255, 255);
+  border-color: transparent;
+  background-color: black;
+}
+.nav-tabs .nav-link.active:hover {
+  border-color: black;
+  background-color: transparent;
+}
+.tabs,
+.scrtabs-tab-container,
+.scrtabs-tabs-fixed-container,
+.scrtabs-tab-scroll-arrow {
+  height: 48.016px;
+}
+/* tabs component jQuery scroller */
+.scrtabs-tab-scroll-arrow {
+  color: black;
+  padding: 0;
+  border: none;
+  line-height: 2;
+}
+.scrtabs-tab-scroll-arrow:hover {
+  background-color: transparent;
+}
+.scrtabs-tab-scroll-arrow button {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.scrtabs-disable i {
+  color: transparent;
+}
+.scrtabs-tab-scroll-arrow-left {
+  text-align: right;
+  width: 60px;
+  padding-right: 6px;
+}
+.scrtabs-tab-scroll-arrow-right {
+  width: 48px;
+  padding-left: 6px;
+}
+.scrtabs-arrow-btn {
+  background-color: transparent;
+  height: 36px;
+  width: 36px;
+  padding: 0;
+  color: black;
+  font-size: 24px;
+  line-height: 12px;
+  border: 0;
+}
+.md-elevation-4dp {
+   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+   0 4px 5px 0 rgba(0, 0, 0, 0.14),
+   0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-image {
+  width: 60%;
+  border-radius: 100%;
+}
+
+.video-responsive{
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow:hidden;
+  padding-bottom:45%;
+  position:relative;
+  height:0;
+}
+.video-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
